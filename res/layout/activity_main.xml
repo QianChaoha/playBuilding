@@ -1,0 +1,259 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_0"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="8">
+
+        <View
+            android:id="@+id/middleVertical"
+            android:layout_width="1px"
+            android:layout_height="100px"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#00000000" />
+
+        <View
+            android:id="@+id/middleHorizontal"
+            android:layout_width="100px"
+            android:layout_height="1px"
+            android:layout_centerInParent="true"
+            android:background="#00000000" />
+
+        <ImageView
+            android:id="@+id/ivQuickStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/main_quick_start_selector"
+            android:clickable="true" />
+
+        <RelativeLayout
+            android:id="@+id/rl5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/middleHorizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/ivQuickStart">
+
+            <ImageView
+                android:id="@+id/iv5"
+                style="@style/main_iv_top"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/main_fs_button_selector"
+                 />
+            <ImageView
+                android:id="@+id/iv55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv5"
+                android:layout_marginTop="-95dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/main_i_state_selector"
+                android:clickable="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ivQuickStart"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="70dp"
+            android:layout_toRightOf="@id/middleVertical">
+
+            <ImageView
+                android:id="@+id/iv4"
+                style="@style/main_iv_top"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/main_5_back_button_selector"
+                 />
+            <ImageView
+                android:id="@+id/iv44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv4"
+                android:layout_marginTop="-75dp"
+                android:layout_marginLeft="22dp"
+                android:background="@drawable/main_i_state_selector"
+                android:clickable="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ivQuickStart"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:id="@+id/iv3"
+                style="@style/main_iv_top"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/main_5_front_button_selector"
+                />
+
+            <ImageView
+                android:id="@+id/iv33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-70dp"
+                android:background="@drawable/main_i_state_selector"
+                android:clickable="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ivQuickStart"
+            android:layout_marginRight="70dp"
+            android:layout_toLeftOf="@id/middleVertical">
+
+            <ImageView
+                android:id="@+id/iv2"
+                style="@style/main_iv_top"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/main_12_button_selector"
+               />
+
+            <ImageView
+                android:id="@+id/iv22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/iv2"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="-75dp"
+                android:background="@drawable/main_i_state_selector"
+                android:clickable="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/middleHorizontal"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/ivQuickStart">
+
+            <ImageView
+                android:id="@+id/iv1"
+                style="@style/main_iv_top"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/main_cw_button_selector"
+
+                />
+
+            <ImageView
+                android:id="@+id/iv11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/iv1"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="-95dp"
+                android:background="@drawable/main_i_state_selector"
+                android:clickable="true" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:text="welcome"
+        android:textColor="#ff0000"
+        android:textSize="@dimen/text_26" />
+
+    <TextView
+        android:id="@+id/tvSelectText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_26" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <RelativeLayout 
+            android:id="@+id/rlGettingStart"
+            style="@style/main_rl_borrom">
+
+            <LinearLayout style="@style/main_ll_borrom">
+
+                <ImageView
+                    style="@style/main_iv_bottom"
+                    android:background="@drawable/video_icon_123" />
+
+                <TextView
+                    style="@style/main_tv_bottom"
+                    android:text="Getting Started" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+             android:id="@+id/rlEnglish"
+             style="@style/main_rl_borrom">
+
+            <LinearLayout style="@style/main_ll_borrom">
+
+                <ImageView
+                    style="@style/main_iv_bottom"
+                    android:background="@drawable/english_flag_116" />
+
+                <TextView
+                    style="@style/main_tv_bottom"
+                    android:text="English" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/main_rl_borrom">
+
+            <LinearLayout style="@style/main_ll_borrom">
+
+                <ImageView
+                    style="@style/main_iv_bottom"
+                    android:background="@drawable/video_icon_123" />
+
+                <TextView
+                    style="@style/main_tv_bottom"
+                    android:text="Rotary Motion" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
