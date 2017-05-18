@@ -29,6 +29,11 @@ public class CustomerWorkoutBottomAdapter extends BaseAdapter<CustomerWorkoutEnt
         TextView tvContent=holder.get(R.id.tvTop);
         tvContent.setText(getItem(position).mText);
         ImageView imageView=holder.get(R.id.imageView);
-        imageView.setBackgroundResource(getItem(position).mImageId);
+        if (getItem(position).mImageId==-1) {
+        	imageView.setBackgroundResource(getItem(0).mImageId);
+		}else {
+			imageView.setBackgroundResource(getItem(position).mImageId);
+		}
+        
     }
 }
