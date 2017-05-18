@@ -155,4 +155,23 @@
         <item name="android:background">#323335</item>
         <item name="android:layout_marginRight">10dp</item>
     </style>
+
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/green_selector"
+    android:gravity="center"
+    android:textColor=""
+    android:text="Manual"
+    android:textSize="@dimen/text_20"
+    android:padding="8dp"
+    <style name="tv_green" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@drawable/green_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_20</item>
+    </style>
 </resources>
