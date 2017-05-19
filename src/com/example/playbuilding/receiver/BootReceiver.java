@@ -4,7 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.example.playbuilding.activity.MainActivity;
+import com.example.playbuilding.activity.SelectWeightActivity;
 
 /**
  * Created by cqian on 2017/5/12.
@@ -15,17 +15,16 @@ public class BootReceiver extends BroadcastReceiver {
 
 
     @Override
-
     public void onReceive(Context context, Intent intent) {
-        System.out.println("====开机了====");
-
-        Intent bootStartIntent = new Intent(context, MainActivity.class);
-
-        bootStartIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-        context.startActivity(bootStartIntent);
-
-
+        System.out.println(intent.getAction()+"    66666666666666");
+        if(intent.getAction().equals(action_boot)) {     // boot
+            System.out.println("启动。。。");
+            Intent intent2 = new Intent(context, SelectWeightActivity.class);
+//          intent2.setAction("android.intent.action.MAIN");
+//          intent2.addCategory("android.intent.category.LAUNCHER");
+            intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent2);
+        }
     }
 
 }

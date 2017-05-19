@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
     <!--Android 3.2之前的双面板布局-->
 <resources>
-    <item name="main" type="layout">@layout/activity_main</item>
-    <item name="info" type="layout">@layout/info_dialog</item>
-    <item name="language" type="layout">@layout/select_language</item>
 </resources>
