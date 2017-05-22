@@ -26,16 +26,10 @@
             </intent-filter>
         </activity>
         <!--<activity android:name="com.example.bodybuilding.activity.SelectWeightActivity"></activity>-->
-        <activity android:name="com.example.playbuilding.activity.CustomWorkoutActivity"></activity>
-        <activity android:name="com.example.playbuilding.activity.WorkoutScreenActivity"></activity>
-        <activity android:name="com.example.playbuilding.activity.ClubSettingActivity"></activity>
         <activity android:name=".activity.SelectManualActivity"></activity>
         <activity android:name=".activity.SelectProgramActivity"></activity>
         <activity android:name=".activity.PlayVideoActivity"></activity>
         <activity android:name=".activity.WorkoutSummaryActivity"></activity>
-        <activity
-            android:name="com.example.playbuilding.activity.HeartrateActivity"
-            android:theme="@style/android:Theme.Light"></activity>
         <receiver android:name=".receiver.BootReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

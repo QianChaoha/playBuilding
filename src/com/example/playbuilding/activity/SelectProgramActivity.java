@@ -19,23 +19,24 @@ public class SelectProgramActivity extends BaseActivity {
 	private ImageView mIvGo;
 	private int[] id=new int[]{R.raw.back_extension,R.raw.bicep_curl,R.raw.shoulder_press,
 			R.raw.tricep_extension,R.raw.standing_row,R.raw.chest_press,
-			R.raw.chest_flyes,R.raw.rear_cable_lunge,R.raw.lat_pulldown,R.raw.squat,};
+			R.raw.chest_flyes,R.raw.rear_cable_lunge,R.raw.lat_pulldown,R.raw.squat,
+			R.raw.leg_swing,R.raw.upright_row};
 	@Override
 	protected void initView() {
 		mGridView = getView(R.id.gridView);
 		List<CustomerWorkoutEntity> list = new ArrayList<CustomerWorkoutEntity>();
-		list.add(new CustomerWorkoutEntity(R.drawable.j_img_front_01_n, "Back Extension"));
-		list.add(new CustomerWorkoutEntity(-1, "Biceps Curl"));
-		list.add(new CustomerWorkoutEntity(-1, "Shoulder Hilo"));
-		list.add(new CustomerWorkoutEntity(-1, "Tricep Kickback"));
-		list.add(new CustomerWorkoutEntity(-1, "Standing ROW"));
-		list.add(new CustomerWorkoutEntity(-1, "Chest Press"));
-		list.add(new CustomerWorkoutEntity(-1, "Chest Flye"));
-		list.add(new CustomerWorkoutEntity(-1, "Cable Crossover"));
-		list.add(new CustomerWorkoutEntity(-1, "Lat Pull Down"));
-		list.add(new CustomerWorkoutEntity(-1, "Squat"));
-		list.add(new CustomerWorkoutEntity(-2, ""));
-		list.add(new CustomerWorkoutEntity(-2, ""));
+		list.add(new CustomerWorkoutEntity(R.drawable.back_extension, "Back Extension"));
+		list.add(new CustomerWorkoutEntity(R.drawable.bicep_curl, "Biceps Curl"));
+		list.add(new CustomerWorkoutEntity(R.drawable.shoulder_ress, "Shoulder Hilo"));
+		list.add(new CustomerWorkoutEntity(R.drawable.tricep_extension, "Tricep Kickback"));
+		list.add(new CustomerWorkoutEntity(R.drawable.standing_row, "Standing ROW"));
+		list.add(new CustomerWorkoutEntity(R.drawable.chest_press, "Chest Press"));
+		list.add(new CustomerWorkoutEntity(R.drawable.chest_flyes, "Chest Flye"));
+		list.add(new CustomerWorkoutEntity(R.drawable.rear_cable_lunge, "Cable Crossover"));
+		list.add(new CustomerWorkoutEntity(R.drawable.lat_pulldown, "Lat Pull Down"));
+		list.add(new CustomerWorkoutEntity(R.drawable.squat, "Squat"));
+		list.add(new CustomerWorkoutEntity(R.drawable.leg_swing, "Leg Swing"));
+		list.add(new CustomerWorkoutEntity(R.drawable.upright_row, "Upright Row"));
 		final CustomerWorkoutBottomAdapter adapter = new CustomerWorkoutBottomAdapter(mContext, list);
 		mGridView.setAdapter(adapter);
 		mIvGo = getView(R.id.ivGo);
