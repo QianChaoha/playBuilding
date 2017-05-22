@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="5dp">
+    android:padding="2dp">
 
     <TextView
         android:id="@+id/tvTop"
@@ -14,13 +14,14 @@
         android:layout_marginTop="15dp"
         android:gravity="center"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/text_14" />
+        android:textSize="@dimen/text_12" />
 
     <ImageView
         android:id="@+id/ivCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="2dp"
         android:clickable="true" />
 
     <ImageView

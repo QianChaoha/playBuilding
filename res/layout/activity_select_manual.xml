@@ -54,6 +54,7 @@
                     android:background="@drawable/i_but_add_n" />
 
                 <ImageView
+                    android:id="@+id/ivOneRightReduce"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
@@ -63,11 +64,12 @@
             </RelativeLayout>
 
             <TextView
+                android:id="@+id/tvOne"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/i_workout_overlay"
                 android:gravity="center"
-                android:text="20"
+                android:text="5"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/text_40"
                 android:textStyle="bold" />
@@ -78,16 +80,18 @@
                 android:orientation="horizontal" >
 
                 <TextView
+                    android:id="@+id/tvOne5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/i_but_sizebg_n"
+                    android:background="@drawable/bt_blue"
                     android:gravity="center"
                     android:text="5"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/text_24" />
 
                 <TextView
+                    android:id="@+id/tvOne10"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -98,6 +102,7 @@
                     android:textSize="@dimen/text_24" />
 
                 <TextView
+                    android:id="@+id/tvOne20"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -130,6 +135,7 @@
                     android:background="@drawable/i_but_add_n" />
 
                 <ImageView
+                    android:id="@+id/ivThreeLeftReduce"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
@@ -139,11 +145,12 @@
             </RelativeLayout>
 
             <TextView
+                android:id="@+id/tvThree"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/i_workout_overlay"
                 android:gravity="center"
-                android:text="00:30"
+                android:text="10"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/text_40"
                 android:textStyle="bold" />
@@ -154,16 +161,18 @@
                 android:orientation="horizontal" >
 
                 <TextView
+                    android:id="@+id/tvThree10"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/i_but_sizebg_n"
+                    android:background="@drawable/bt_blue"
                     android:gravity="center"
                     android:text="10"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/text_24" />
 
                 <TextView
+                    android:id="@+id/tvThree20"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -174,6 +183,7 @@
                     android:textSize="@dimen/text_24" />
 
                 <TextView
+                    android:id="@+id/tvThree30"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -208,7 +218,7 @@
                     android:textSize="@dimen/text_18" />
 
                 <ImageView
-                    android:id="@+id/ivOneLeftAdd"
+                    android:id="@+id/ivTwoLeftAdd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -216,20 +226,22 @@
                     android:background="@drawable/i_but_add_n" />
 
                 <ImageView
+                    android:id="@+id/ivTwoLeftReduce"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="80dp"
-                    android:layout_toLeftOf="@id/ivOneLeftAdd"
+                    android:layout_toLeftOf="@id/ivTwoLeftAdd"
                     android:background="@drawable/i_but_sub_n" />
             </RelativeLayout>
 
             <TextView
+                android:id="@+id/tvTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/i_workout_overlay"
                 android:gravity="center"
-                android:text="00:30"
+                android:text="10"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/text_40"
                 android:textStyle="bold" />
@@ -240,16 +252,18 @@
                 android:orientation="horizontal" >
 
                 <TextView
+                    android:id="@+id/tvTwo10"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/i_but_sizebg_n"
+                    android:background="@drawable/bt_blue"
                     android:gravity="center"
                     android:text="10"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/text_24" />
 
                 <TextView
+                    android:id="@+id/tvTwo20"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -260,6 +274,7 @@
                     android:textSize="@dimen/text_24" />
 
                 <TextView
+                    android:id="@+id/tvTwo30"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

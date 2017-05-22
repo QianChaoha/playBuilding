@@ -1,5 +1,8 @@
 package com.example.playbuilding.activity;
 
+import android.content.Intent;
+import android.view.View;
+
 import com.example.playbuilding.R;
 import com.example.playbuilding.base.BaseActivity;
 
@@ -20,5 +23,8 @@ public class WorkoutSummaryActivity extends BaseActivity {
     @Override
     protected int getLayoutId() {
         return R.layout.activity_workout_summary;
+    }
+    public void clickHome(View view){
+        startActivity(new Intent(mContext,SelectWeightActivity.class));
     }
 }

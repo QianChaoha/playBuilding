@@ -113,7 +113,7 @@ public class SelectWeightActivity extends BaseActivity implements OnClickListene
         } else {
             long time = mSharedPreferences.getLong("time", System.currentTimeMillis());
             int dTime = (int) ((System.currentTimeMillis() - time) / (1000 * 60 * 60 * 24));
-            if (dTime > 5) {
+            if (dTime > 6) {
                 finish();
             }
         }
@@ -151,7 +151,9 @@ public class SelectWeightActivity extends BaseActivity implements OnClickListene
         mList.add(45);
         mList.add(54);
         mList.add(63);
-        mList.add(81);
+        mList.add(73);
+        mList.add(82);
+        mList.add(91);
         mList.add(null);
         mList.add(null);
         mSelectWeightAdapter = new SelectWeightAdapter(mContext, mList);
