@@ -25,15 +25,34 @@ public class PlayVideoActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
-        int id = getIntent().getIntExtra("id", -1);
+        final int id = getIntent().getIntExtra("id", -1);
         if (id == -1) {
             return;
         }
         mVideoView = getView(R.id.videoView);
         mVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + id));
-        mVideoView.setMediaController(new MediaController(mContext));
+//        mVideoView.setMediaController(new MediaController(mContext));
         mVideoView.requestFocus();
         mVideoView.start();
+        mVideoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.start();
+                mp.setLooping(true);
+
+            }
+        });
+
+        mVideoView
+                .setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + id));
+                        mVideoView.start();
+                    }
+                });
     }
 
     @Override

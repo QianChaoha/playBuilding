@@ -22,8 +22,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.playbuilding.R;
-import com.example.bodybuilding.base.BaseActivity;
 import com.example.playbuilding.adapter.SelectWeightAdapter;
+import com.example.playbuilding.base.BaseActivity;
 
 public class SelectWeightActivity extends BaseActivity implements OnClickListener {
     private TextView mTvTitle;

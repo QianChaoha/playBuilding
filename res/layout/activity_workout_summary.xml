@@ -24,6 +24,7 @@
             android:paddingRight="30dp"
             android:paddingTop="10dp"
             android:textColor="@android:color/white"
+            android:onClick="clickHome"
             android:textSize="@dimen/text_20" />
 
         <TextView
