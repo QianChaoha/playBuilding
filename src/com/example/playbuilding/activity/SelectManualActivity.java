@@ -6,7 +6,7 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.bodybuilding.base.BaseActivity;
+import com.example.playbuilding.base.BaseActivity;
 import com.example.playbuilding.R;
 
 /**

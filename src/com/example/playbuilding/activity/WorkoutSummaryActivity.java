@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.view.View;
 
 import com.example.playbuilding.R;
-import com.example.bodybuilding.base.BaseActivity;
+import com.example.playbuilding.base.BaseActivity;
 
 /**
  * Created by cqian on 2017/5/19.
