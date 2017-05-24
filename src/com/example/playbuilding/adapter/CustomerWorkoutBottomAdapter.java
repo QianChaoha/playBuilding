@@ -1,4 +1,4 @@
-package com.example.playbuilding.adapter;
+package com.example.bodybuilding.adapter;
 
 import android.content.Context;
 import android.view.View;
@@ -7,10 +7,10 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.playbuilding.R;
-import com.example.playbuilding.base.BaseAdapter;
-import com.example.playbuilding.base.ViewHolder;
-import com.example.playbuilding.entity.CustomerWorkoutEntity;
+import com.example.bodybuilding.R;
+import com.example.bodybuilding.base.BaseAdapter;
+import com.example.bodybuilding.base.ViewHolder;
+import com.example.bodybuilding.entity.CustomerWorkoutEntity;
 
 import java.util.List;
 

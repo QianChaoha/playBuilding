@@ -22,8 +22,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.playbuilding.R;
+import com.example.bodybuilding.base.BaseActivity;
 import com.example.playbuilding.adapter.SelectWeightAdapter;
-import com.example.playbuilding.base.BaseActivity;
 
 public class SelectWeightActivity extends BaseActivity implements OnClickListener {
     private TextView mTvTitle;
@@ -37,87 +37,6 @@ public class SelectWeightActivity extends BaseActivity implements OnClickListene
 
     @Override
     protected void initView() {
-        // ==================================================
-        mSharedPreferences = getSharedPreferences("config", MODE_PRIVATE);
-        mEditor = mSharedPreferences.edit();
-        boolean temp = mSharedPreferences.getBoolean("isFirst", true);
-
-        File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/Download");
-        if (file != null) {
-            if (!file.exists()) {
-                file.mkdirs();
-            }
-        }
-        File childFile = new File(file, "config1.txt");
-        if (childFile != null) {
-            if (!childFile.exists()) {
-                try {
-                    childFile.createNewFile();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        if (temp) {
-            FileReader fileReader=null;
-            BufferedReader reader=null;
-            BufferedWriter writer=null;
-            try {
-                fileReader = new FileReader(childFile);
-                reader = new BufferedReader(fileReader);
-                String line = reader.readLine();
-                //第一次启动
-                if (!TextUtils.isEmpty(line)) {
-                    //之前有安装过
-                    long time = Long.valueOf(line);
-                    int dTime = (int) ((System.currentTimeMillis() - time) / (1000 * 60 * 60 * 24));
-                    if (dTime > 14) {
-                        finish();
-                    }
-                }else {
-                    //确实是第一次安装
-                    writer=new BufferedWriter(new FileWriter(childFile));
-                    writer.write(System.currentTimeMillis()+"");
-                    writer.flush();
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }finally{
-                if (fileReader!=null) {
-                    try {
-                        fileReader.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-                if (reader!=null) {
-                    try {
-                        reader.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-                if (writer!=null) {
-                    try {
-                        writer.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        }
-
-        if (temp) {
-            mEditor.putBoolean("isFirst", false);
-            mEditor.putLong("time", System.currentTimeMillis()).commit();
-        } else {
-            long time = mSharedPreferences.getLong("time", System.currentTimeMillis());
-            int dTime = (int) ((System.currentTimeMillis() - time) / (1000 * 60 * 60 * 24));
-            if (dTime > 5) {
-                finish();
-            }
-        }
-        // ==================================================
 
         mIvLibs = getView(R.id.ivLibs);
         mIvLibs.setOnClickListener(this);

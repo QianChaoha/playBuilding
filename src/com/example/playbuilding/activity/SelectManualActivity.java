@@ -5,8 +5,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 
+import com.example.bodybuilding.base.BaseActivity;
 import com.example.playbuilding.R;
-import com.example.playbuilding.base.BaseActivity;
 
 /**
  * Created by cqian on 2017/5/17.

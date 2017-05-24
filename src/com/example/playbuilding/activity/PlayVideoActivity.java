@@ -9,7 +9,7 @@ import android.widget.MediaController;
 import android.widget.VideoView;
 
 import com.example.playbuilding.R;
-import com.example.playbuilding.base.BaseActivity;
+import com.example.bodybuilding.base.BaseActivity;
 
 public class PlayVideoActivity extends BaseActivity {
     private VideoView mVideoView;

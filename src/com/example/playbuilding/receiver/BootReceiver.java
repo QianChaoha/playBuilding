@@ -6,6 +6,7 @@ import android.content.Intent;
 
 import com.example.playbuilding.activity.SelectWeightActivity;
 
+
 /**
  * Created by cqian on 2017/5/12.
  */

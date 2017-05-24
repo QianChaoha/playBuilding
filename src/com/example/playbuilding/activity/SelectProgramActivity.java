@@ -10,9 +10,9 @@ import android.widget.GridView;
 import android.widget.ImageView;
 
 import com.example.playbuilding.R;
-import com.example.playbuilding.adapter.CustomerWorkoutBottomAdapter;
-import com.example.playbuilding.base.BaseActivity;
-import com.example.playbuilding.entity.CustomerWorkoutEntity;
+import com.example.bodybuilding.adapter.CustomerWorkoutBottomAdapter;
+import com.example.bodybuilding.base.BaseActivity;
+import com.example.bodybuilding.entity.CustomerWorkoutEntity;
 
 public class SelectProgramActivity extends BaseActivity {
 	private GridView mGridView;
