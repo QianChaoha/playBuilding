@@ -1,4 +1,4 @@
-package com.example.bodybuilding.base;
+package com.example.playbuilding.base;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
