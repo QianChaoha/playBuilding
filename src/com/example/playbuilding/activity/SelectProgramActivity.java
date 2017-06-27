@@ -8,9 +8,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.playbuilding.R;
 import com.example.playbuilding.adapter.CustomerWorkoutBottomAdapter;
+import com.example.playbuilding.adapter.SelectWeightAdapter;
 import com.example.playbuilding.base.BaseActivity;
 import com.example.playbuilding.entity.CustomerWorkoutEntity;
 
@@ -21,9 +23,11 @@ public class SelectProgramActivity extends BaseActivity {
 			R.raw.tricep_extension,R.raw.standing_row,R.raw.chest_press,
 			R.raw.chest_flyes,R.raw.rear_cable_lunge,R.raw.lat_pulldown,R.raw.squat,
 			R.raw.leg_swing,R.raw.upright_row};
+	private TextView mTvReset;
 	@Override
 	protected void initView() {
 		mGridView = getView(R.id.gridView);
+		mTvReset = getView(R.id.tvReset);
 		List<CustomerWorkoutEntity> list = new ArrayList<CustomerWorkoutEntity>();
 		list.add(new CustomerWorkoutEntity(R.drawable.back_extension, "Back Extension"));
 		list.add(new CustomerWorkoutEntity(R.drawable.bicep_curl, "Biceps Curl"));
@@ -46,6 +50,14 @@ public class SelectProgramActivity extends BaseActivity {
 			public void onClick(View v) {
 				Intent intent = new Intent(mContext, PlayVideoActivity.class);
 				intent.putExtra("id",id[adapter.getSelect()]);
+				startActivity(intent);
+			}
+		});
+		mTvReset.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(mContext, SelectWeightActivity.class);
 				startActivity(intent);
 			}
 		});

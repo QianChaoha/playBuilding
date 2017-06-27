@@ -35,7 +35,7 @@
                     android:id="@+id/ivLibs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/n_but_lbs_l"
+                    android:background="@drawable/n_but_lbs_n"
                     android:clickable="true"
                     android:gravity="center"
                     android:padding="10dp" />
@@ -44,7 +44,7 @@
                     android:id="@+id/ivKg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/n_but_kg_n"
+                    android:background="@drawable/n_but_kg_l"
                     android:clickable="true"
                     android:gravity="center"
                     android:padding="10dp" />
@@ -96,6 +96,7 @@
             android:layout_weight="1">
 
             <TextView
+                android:id="@+id/tvManual"
                 style="@style/tv_green"
                 android:layout_marginTop="10dp"
                 android:text="Manual" />
@@ -115,6 +116,7 @@
                 android:padding="8dp" />
 
             <TextView
+                android:id="@+id/tvProgram"
                 style="@style/tv_green"
                 android:layout_below="@id/ivGo"
                 android:layout_centerHorizontal="true"
@@ -128,6 +130,7 @@
             android:layout_weight="1">
 
             <TextView
+                android:id="@+id/tvSg"
                 style="@style/tv_green"
                 android:text="Select Goal"
                 android:layout_marginTop="10dp"/>

@@ -17,6 +17,7 @@ public class SelectWeightAdapter extends BaseAdapter<Integer> {
         super(context, list);
         if (list != null) {
             selects = new boolean[list.size()];
+            selects[0]=true;
         }
     }
 

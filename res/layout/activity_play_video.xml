@@ -39,6 +39,7 @@
                         android:textSize="@dimen/text_14" />
 
                     <TextView
+                        android:id="@+id/tvReCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -70,6 +71,7 @@
                         android:textSize="@dimen/text_14" />
 
                     <TextView
+                        android:id="@+id/tvTime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -123,6 +125,7 @@
                 android:layout_weight="1" >
 
                 <TextView
+                    android:id="@+id/tvSr"
                     style="@style/tv_green"
                     android:textSize="@dimen/text_16"
                     android:layout_gravity="right|center_vertical"
@@ -136,6 +139,7 @@
                 android:layout_weight="1" >
 
                 <TextView
+                    android:id="@+id/tvSt"
                     style="@style/tv_green"
                     android:textSize="@dimen/text_16"
                     android:layout_gravity="right|center_vertical"
@@ -149,6 +153,7 @@
                 android:layout_weight="1" >
 
                 <TextView
+                    android:id="@+id/tvSw"
                     style="@style/tv_green"
                     android:textSize="@dimen/text_16"
                     android:layout_gravity="right|center_vertical"
