@@ -1,23 +1,22 @@
 package com.example.playbuilding.base;
 
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.view.KeyEvent;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 
-import com.example.playbuilding.activity.SelectWeightActivity;
+import com.example.playbuilding.activity.MainActivity;
+import com.example.playbuilding.activity.SelectWeightFragment;
 
 
 /**
  * Created by cqian on 2017/5/4.
  */
-public abstract class BaseActivity extends Activity {
+public abstract class BaseActivity extends FragmentActivity {
     protected Context mContext;
 
     @Override
@@ -69,7 +68,7 @@ public abstract class BaseActivity extends Activity {
             if (action.equals(Intent.ACTION_CLOSE_SYSTEM_DIALOGS)) { // 监听home键
                 String reason = intent.getStringExtra(SYSTEM_REASON);
                 // 表示按了home键,程序到了后台
-                startActivity(new Intent(mContext, SelectWeightActivity.class));
+                startActivity(new Intent(mContext, MainActivity.class));
             }
         }
     };

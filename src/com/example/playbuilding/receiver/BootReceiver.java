@@ -4,7 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.example.playbuilding.activity.SelectWeightActivity;
+import com.example.playbuilding.activity.SelectWeightFragment;
 
 
 /**
@@ -20,7 +20,7 @@ public class BootReceiver extends BroadcastReceiver {
         System.out.println(intent.getAction()+"    66666666666666");
         if(intent.getAction().equals(action_boot)) {     // boot
             System.out.println("启动。。。");
-            Intent intent2 = new Intent(context, SelectWeightActivity.class);
+            Intent intent2 = new Intent(context, SelectWeightFragment.class);
 //          intent2.setAction("android.intent.action.MAIN");
 //          intent2.addCategory("android.intent.category.LAUNCHER");
             intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

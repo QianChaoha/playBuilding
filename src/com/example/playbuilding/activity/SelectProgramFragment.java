@@ -3,7 +3,7 @@ package com.example.playbuilding.activity;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.GridView;
@@ -12,11 +12,10 @@ import android.widget.TextView;
 
 import com.example.playbuilding.R;
 import com.example.playbuilding.adapter.CustomerWorkoutBottomAdapter;
-import com.example.playbuilding.adapter.SelectWeightAdapter;
-import com.example.playbuilding.base.BaseActivity;
+import com.example.playbuilding.base.BaseFragment;
 import com.example.playbuilding.entity.CustomerWorkoutEntity;
 
-public class SelectProgramActivity extends BaseActivity {
+public class SelectProgramFragment extends BaseFragment {
 	private GridView mGridView;
 	private ImageView mIvGo;
 	private int[] id=new int[]{R.raw.back_extension,R.raw.bicep_curl,R.raw.shoulder_press,
@@ -48,17 +47,16 @@ public class SelectProgramActivity extends BaseActivity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(mContext, PlayVideoActivity.class);
-				intent.putExtra("id",id[adapter.getSelect()]);
-				startActivity(intent);
+				Bundle bundle=new Bundle();
+				bundle.putInt("id",id[adapter.getSelect()]);
+				mContext.goPv(bundle);
 			}
 		});
 		mTvReset.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(mContext, SelectWeightActivity.class);
-				startActivity(intent);
+				mContext.goSw();
 			}
 		});
 	}

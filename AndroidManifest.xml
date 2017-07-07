@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.SelectWeightActivity"
+            android:name=".activity.MainActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask">
             <intent-filter>
@@ -23,11 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--<activity android:name="com.example.bodybuilding.activity.SelectWeightActivity"></activity>-->
-        <activity android:name=".activity.SelectManualActivity"></activity>
-        <activity android:name=".activity.SelectProgramActivity"></activity>
-        <activity android:name=".activity.PlayVideoActivity"></activity>
-        <activity android:name=".activity.WorkoutSummaryActivity"></activity>
+        <!--<activity android:name="com.example.bodybuilding.activity.SelectWeightFragment"></activity>-->
+        <activity android:name=".activity.SelectManualFragment"></activity>
+        <activity android:name=".activity.SelectProgramFragment"></activity>
+        <activity android:name=".activity.PlayVideoFragment"></activity>
+        <activity android:name=".activity.WorkoutSummaryFragment"></activity>
         <receiver android:name=".receiver.BootReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

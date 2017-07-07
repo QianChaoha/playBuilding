@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Environment;
 import android.text.TextUtils;
@@ -24,8 +23,9 @@ import android.widget.TextView;
 import com.example.playbuilding.R;
 import com.example.playbuilding.adapter.SelectWeightAdapter;
 import com.example.playbuilding.base.BaseActivity;
+import com.example.playbuilding.base.BaseFragment;
 
-public class SelectWeightActivity extends BaseActivity implements OnClickListener {
+public class SelectWeightFragment extends BaseFragment implements OnClickListener {
     private TextView mTvTitle,mTvManual,mTvProgram,mTvSg;
     private GridView mGridView;
     private Button btContinue;
@@ -37,7 +37,6 @@ public class SelectWeightActivity extends BaseActivity implements OnClickListene
 
     @Override
     protected void initView() {
-
         mIvLibs = getView(R.id.ivLibs);
         mTvManual = getView(R.id.tvManual);
         mTvProgram = getView(R.id.tvProgram);
@@ -124,24 +123,17 @@ public class SelectWeightActivity extends BaseActivity implements OnClickListene
                 initListKg();
                 break;
             case R.id.ivGo:
-                startActivity(new Intent(mContext, PlayVideoActivity.class));
+                mContext.goPv(null);
                 break;
             case R.id.tvManual:
-                startActivity(new Intent(mContext, PlayVideoActivity.class));
+                mContext.goPv(null);
                 break;
             case R.id.tvProgram:
-                startActivity(new Intent(mContext, SelectProgramActivity.class));
+                mContext.goSp();
                 break;
             case R.id.tvSg:
-                startActivity(new Intent(mContext, SelectManualActivity.class));
+                mContext.goSp();
                 break;
         }
-    }
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
     }
 }

@@ -1,6 +1,6 @@
 package com.example.playbuilding.activity;
 
-import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
@@ -10,11 +10,12 @@ import android.widget.Toast;
 
 import com.example.playbuilding.base.BaseActivity;
 import com.example.playbuilding.R;
+import com.example.playbuilding.base.BaseFragment;
 
 /**
  * Created by cqian on 2017/5/17.
  */
-public class SelectManualActivity extends BaseActivity implements OnClickListener {
+public class SelectManualFragment extends BaseFragment implements OnClickListener {
     private ImageView mIvGo, mIvOneRightAdd, mIvOneRightReduce, mIvTwoLeftAdd, mIvTwoRightReduce, mIvThreeLeftAdd, mIvThreeRightReduce;
     private EditText mTvOne, mTvTwo, mTvThree;
     private TextView mTvReset;
@@ -43,7 +44,7 @@ public class SelectManualActivity extends BaseActivity implements OnClickListene
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, PlayVideoActivity.class);
+                Bundle bundle=new Bundle();
                 int one, two, three;
                 try {
                     one = Integer.valueOf(mTvOne.getText().toString());
@@ -65,18 +66,17 @@ public class SelectManualActivity extends BaseActivity implements OnClickListene
                     showToast("Interval Time选项输入不合法");
                     return;
                 }
-                intent.putExtra("one", one);
-                intent.putExtra("two", twoStr);
-                intent.putExtra("three", threeStr);
-                startActivity(intent);
+                bundle.putInt("one", one);
+                bundle.putString("two", twoStr);
+                bundle.putString("three", threeStr);
+                mContext.goPv(bundle);
             }
         });
         mTvReset.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, SelectWeightActivity.class);
-                startActivity(intent);
+                mContext.goSw();
             }
         });
         mTvOne = getView(R.id.tvOne);

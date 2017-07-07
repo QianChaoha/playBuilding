@@ -1,20 +1,18 @@
 package com.example.playbuilding.activity;
 
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
-
 import com.example.playbuilding.R;
-import com.example.playbuilding.base.BaseActivity;
+import com.example.playbuilding.base.BaseFragment;
 
-public class PlayVideoActivity extends BaseActivity {
+public class PlayVideoFragment extends BaseFragment {
     private VideoView mVideoView;
     private ImageView mIvGo;
     TextView mTvSr, mTvSt, mTvSw;
@@ -25,9 +23,9 @@ public class PlayVideoActivity extends BaseActivity {
             mReCount--;
             mTimeCount--;
             if (mTimeCount >= 0) {
-                if (mTimeCount>=10){
+                if (mTimeCount >= 10) {
                     mTvTime.setText("00:" + mTimeCount);
-                }else {
+                } else {
                     mTvTime.setText("00:0" + mTimeCount);
                 }
 
@@ -60,17 +58,17 @@ public class PlayVideoActivity extends BaseActivity {
         mTvSr = getView(R.id.tvSr);
         mTvSt = getView(R.id.tvSt);
         mTvSw = getView(R.id.tvSw);
-        Intent intent=getIntent();
-        if (intent!=null && intent.getExtras()!=null){
-            mReCount=intent.getIntExtra("one", 20);
-            String twoStr=intent.getStringExtra("two");
-            if (twoStr!=null){
-                mTimeCount=Integer.valueOf(twoStr.substring(3,5));
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            mReCount = bundle.getInt("one", 20);
+            String twoStr = bundle.getString("two");
+            if (twoStr != null) {
+                mTimeCount = Integer.valueOf(twoStr.substring(3, 5));
             }
-            mTvReCount.setText(mReCount+"");
-            if (mTimeCount>=10){
+            mTvReCount.setText(mReCount + "");
+            if (mTimeCount >= 10) {
                 mTvTime.setText("00:" + mTimeCount);
-            }else {
+            } else {
                 mTvTime.setText("00:0" + mTimeCount);
             }
         }
@@ -80,34 +78,37 @@ public class PlayVideoActivity extends BaseActivity {
         mTvSr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(mContext, SelectManualActivity.class));
+                mContext.goSm();
             }
         });
         mTvSt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(mContext, SelectManualActivity.class));
+                mContext.goSm();
             }
         });
         mTvSw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(mContext, SelectWeightActivity.class));
+                mContext.goSf();
             }
         });
         mIvGo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, WorkoutSummaryActivity.class);
-                startActivity(intent);
+                mContext.goWs();
             }
         });
-        final int id = getIntent().getIntExtra("id", -1);
+        Bundle bundle1 = getArguments();
+        int id = -1;
+        if (bundle1 != null) {
+            id = bundle1.getInt("id", -1);
+        }
         if (id == -1) {
             return;
         }
         mVideoView = getView(R.id.videoView);
-        mVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + id));
+        mVideoView.setVideoURI(Uri.parse("android.resource://" + mContext.getPackageName() + "/" + id));
 //        mVideoView.setMediaController(new MediaController(mContext));
         mVideoView.requestFocus();
         mVideoView.start();
@@ -120,13 +121,13 @@ public class PlayVideoActivity extends BaseActivity {
 
             }
         });
-
+        final int id1 = id;
         mVideoView
                 .setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 
                     @Override
                     public void onCompletion(MediaPlayer mp) {
-                        mVideoView.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + id));
+                        mVideoView.setVideoURI(Uri.parse("android.resource://" + mContext.getPackageName() + "/" + id1));
                         mVideoView.start();
                     }
                 });
